@@ -1,5 +1,6 @@
-body {
-  font: 10% Helvetica, sans-serif;
-  color: red; }
+@import url(../css_impot_scss/bootstrap.min.css);
+body { font: 100% Helvetica, sans-serif; color: black; }
+
+/* test */
 
 /*# sourceMappingURL=style.css.map */

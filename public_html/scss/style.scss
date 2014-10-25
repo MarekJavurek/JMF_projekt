@@ -1,7 +1,11 @@
+
 $font-stack: Helvetica, sans-serif;
-$primary-color: red;
+$primary-color: black;
 
 body {
-  font: 10% $font-stack;
+  font: 100% $font-stack;
   color: $primary-color;
 }
+
+/* test */
+@import "../css_impot_scss/bootstrap.min.css";
