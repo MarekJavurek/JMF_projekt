@@ -1,6 +1,7 @@
+@charset "UTF-8";
+/* import frameworku Bootstrap: http://getbootstrap.com/ */
 @import url(../css_impot_scss/bootstrap.min.css);
+/* SCSS deklarace prom─Ťn├Żch */
 body { font: 100% Helvetica, sans-serif; color: black; }
-
-/* test */
 
 /*# sourceMappingURL=style.css.map */

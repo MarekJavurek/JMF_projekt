@@ -1,4 +1,7 @@
+/* import frameworku Bootstrap: http://getbootstrap.com/ */
+@import "../css_impot_scss/bootstrap.min.css";
 
+/* SCSS deklarace proměných */
 $font-stack: Helvetica, sans-serif;
 $primary-color: black;
 
@@ -6,6 +9,3 @@ body {
   font: 100% $font-stack;
   color: $primary-color;
 }
-
-/* test */
-@import "../css_impot_scss/bootstrap.min.css";
