@@ -1,5 +1,6 @@
-JMF_projekt
+Tips:
 ===========
+ - "Alt", "Shift", "F" - upraví okd v netbeans
 Jedná se o školní projekt
 ===========
 autoři:
