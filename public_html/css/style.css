@@ -1,7 +1,7 @@
-@charset "UTF-8";
 /* import frameworku Bootstrap: http://getbootstrap.com/ */
 @import url(../css_impot_scss/bootstrap.min.css);
-/* SCSS deklarace prom─Ťn├Żch */
+@import url(../css_impot_scss/bootstrap-responsive.min.css);
+/* SCSS deklarace promennych */
 body { font: 100% Helvetica, sans-serif; color: black; }
 
 /*# sourceMappingURL=style.css.map */
