@@ -1,7 +1,9 @@
 /* import frameworku Bootstrap: http://getbootstrap.com/ */
 @import url(../css_impot_scss/bootstrap.min.css);
-@import url(../css_impot_scss/bootstrap-responsive.min.css);
 /* SCSS deklarace promennych */
-body { font: 100% Helvetica, sans-serif; color: black; }
+/*
+body { font: 100% $font-stack; color: $primary-color;
+}
+*/
 
 /*# sourceMappingURL=style.css.map */
