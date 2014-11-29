@@ -15,15 +15,18 @@
         <script>
             function initialize() {
                 var mapCanvas = document.getElementById('map-canvas');
+
+                var pos = new google.maps.LatLng(50.073794, 14.414191);
+
                 var mapOptions = {
-                    center: new google.maps.LatLng(50.073794, 14.414191),
+                    center: pos,
                     zoom: 16,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 }
                 var map = new google.maps.Map(mapCanvas, mapOptions);
 
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(50.073794, 14.414191),
+                    position: pos,
                     map: map,
                     title: "Naše kancelář"
                 });
@@ -33,6 +36,28 @@
 
     </head>
     <body>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModalD" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Storno</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Kontaktní formulář</h4>
+                    </div>
+                    <div class="modal-body">
+                        formulář TODO
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Storno</button>
+                        <button type="button" class="btn btn-primary">Odeslat E-mail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -41,24 +66,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="#">WebSiteName</a>
+                    <a class="navbar-brand" href="#">Netdevelopers.biz</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Page 1-1</a></li>
-                                <li><a href="#">Page 1-2</a></li>
-                                <li><a href="#">Page 1-3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
+                        <li class="active"><a href="#">Domovská stránka</a></li>
+                        <li><a href="#">Kdo jsme</a></li>
+                        <li><a href="#">Naše vize</a></li>
+                        <li><a href="#">Reference</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Příhlášení pro naše klienty</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,8 +84,8 @@
 
         <div class="container">
             <div class="jumbotron">
-                <h1>Nazev firmy</h1> 
-                <p><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Více info op naší firmě</button></p>
+                <h1>Netdevelopers.biz</h1> 
+                <p>Našim cílej je dlouhodobá spokojenost všech klientů...</p>
             </div>
         </div>
 
@@ -88,21 +106,21 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="http://www.technotalkative.com/wp-content/uploads/2013/10/Darcula-theme-Android-studio1.png" alt="android">
+                                <img src="http://blog.templatemonster.com/wp-content/uploads/2012/12/bootstrap-site.jpg" alt="android">
                                 <div class="carousel-caption">
-                                    1
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </div>
                             </div>
                             <div class="item">
                                 <img src="http://blog.templatemonster.com/wp-content/uploads/2012/12/bootstrap-site.jpg" alt="bootstrap">
                                 <div class="carousel-caption">
-                                    2
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="http://i0.wp.com/www.cgmeetup.net/home/wp-content/uploads/2014/06/FAR-CRY-4-Cinematic-Trailer-1.jpg" alt="farcry">
+                                <img src="http://blog.templatemonster.com/wp-content/uploads/2012/12/bootstrap-site.jpg" alt="farcry">
                                 <div class="carousel-caption">
-                                    3
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </div>
                             </div>
                         </div>
@@ -110,60 +128,109 @@
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <span class="sr-only">Předchozí</span>
                         </a>
                         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                            <span class="sr-only">Další</span>
                         </a>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">1</div>
-                        <div class="col-md-4">1</div>
-                        <div class="col-md-4">1</div>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c45.45.556.556/s160x160/550892_4093513334560_379183903_n.jpg?oh=789e1eb80b0eeabe0120972883fd727c&oe=54D53CFC&__gda__=1426437687_a6312553a96f735d7a98f404c23b3115" alt="member1">
+                                <div class="caption">
+                                    <h3>Marek Javůrek</h3>
+                                    <p>Váš obchod s počítači a elektronikou. AlzaExpres doručuje za 1,5 h po Praze. Vyzvednutí v AlzaBoxech nonstop. Nabízíme počítače, notebooky, tablety, televize, kamery, fotoaparáty, mobilní telefony, GPS i hračky na splátky, programy, hry, filmy, elektronické knihy, audioknihy i MP3 hudbu ke stažení.</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Zobrazit CV</a> <a href="#" class="btn btn-default" role="button">Kontakt</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/v/t1.0-1/c27.0.160.160/p160x160/581955_470489263069992_157015123_n.jpg?oh=76df41ed91644632895af3706de6fbba&oe=552027CA&__gda__=1427705184_324c4fd6899c053cd2a9842f4f5ee01c" alt="member1">
+                                <div class="caption">
+                                    <h3>Marek Javůrek</h3>
+                                    <p>Váš obchod s počítači a elektronikou. AlzaExpres doručuje za 1,5 h po Praze. Vyzvednutí v AlzaBoxech nonstop. Nabízíme počítače, notebooky, tablety, televize, kamery, fotoaparáty, mobilní telefony, GPS i hračky na splátky, programy, hry, filmy, elektronické knihy, audioknihy i MP3 hudbu ke stažení.</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Zobrazit CV</a> <a href="#" class="btn btn-default" role="button">Kontakt</a></p>
+                                </div>
+                            </div></div>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c0.25.160.160/p160x160/10366008_10202193463066609_2845703159448924634_n.jpg?oh=a61663a7d786607beb9cae2bf7825a96&oe=5520311A&__gda__=1428109937_8e4657277fb5a15169688c3c5efc4baa" alt="member1">
+                                <div class="caption">
+                                    <h3>Marek Javůrek</h3>
+                                    <p>Váš obchod s počítači a elektronikou. AlzaExpres doručuje za 1,5 h po Praze. Vyzvednutí v AlzaBoxech nonstop. Nabízíme počítače, notebooky, tablety, televize, kamery, fotoaparáty, mobilní telefony, GPS i hračky na splátky, programy, hry, filmy, elektronické knihy, audioknihy i MP3 hudbu ke stažení.</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Zobrazit CV</a> <a href="#" class="btn btn-default pull-right" role="button">Kontakt</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12">
-                    <h2>info</h2>
+                    <h2>Informace o nás</h2>
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-                                </h4>
-                            </div>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Kontakt
+                                    </h4>
+                                </div>
+                            </a>
                             <div id="collapse1" class="panel-collapse collapse in">
-                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                <div class="panel-body">
+
+                                    Web: www.alza.cz<br />
+                                    Telefon: +420 225 340 111<br />
+                                    Fax: +420 225 340 190<br />
+                                    Email: obchod@alza.cz<br />
+                                    Výdejní hodiny:<br />
+                                    Po-Pá: 08:00 - 20:00<br />
+
+
+                                </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-                                </h4>
-                            </div>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Sídlo
+                                    </h4>
+                                </div>
+                            </a>
                             <div id="collapse2" class="panel-collapse collapse">
-                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                <div class="panel-body">
+
+                                    Jateční 1530/33<br />
+                                    17000<br />
+                                    Praha, Holešovice<br />
+                                    <a href="#">Naplánovat trasu</a><br />
+
+                                </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-                                </h4>
-                            </div>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        Náš cíl
+                                    </h4>
+                                </div>
+                            </a>
                             <div id="collapse3" class="panel-collapse collapse">
-                                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                                <div class="panel-body">Váš obchod s počítači a elektronikou. AlzaExpres doručuje za 1,5 h po Praze. Vyzvednutí v AlzaBoxech nonstop. Nabízíme počítače, notebooky, tablety, televize, kamery, fotoaparáty, mobilní telefony, GPS i hračky na splátky, programy, hry, filmy, elektronické knihy, audioknihy i MP3 hudbu ke stažení.</div>
                             </div>
                         </div>
 
-                    </div></div>
+                    </div>
+
+
+                    <button data-toggle="modal" data-target="#myModalD" type="button" class="btn btn-info btn-lg btn-block"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Kontaktujte nás!</button>
+
+
+                </div>
             </div>
 
 
