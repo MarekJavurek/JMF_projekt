@@ -1,11 +1,7 @@
 /* import frameworku Bootstrap: http://getbootstrap.com/ */
-@import "../css_impot_scss/bootstrap.min.css";
+@import "../css_impot_scss/bootstrap.css";
 
-/* SCSS deklarace promennych */
-$font-stack: Helvetica, sans-serif;
-$primary-color: black;
-
-
-.navbarpozadi {
-  background-image: "http://i674.photobucket.com/albums/vv109/dalton711/PCM-BG-Diagonal-Lines.png";
+#map-canvas {
+    width: 100%;
+    height: 300px;
 }

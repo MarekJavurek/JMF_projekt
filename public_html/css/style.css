@@ -1,6 +1,5 @@
 /* import frameworku Bootstrap: http://getbootstrap.com/ */
-@import url(../css_impot_scss/bootstrap.min.css);
-/* SCSS deklarace promennych */
-.navbarpozadi { background-image: "http://i674.photobucket.com/albums/vv109/dalton711/PCM-BG-Diagonal-Lines.png"; }
+@import url(../css_impot_scss/bootstrap.css);
+#map-canvas { width: 100%; height: 300px; }
 
 /*# sourceMappingURL=style.css.map */
